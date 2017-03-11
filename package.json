@@ -6,6 +6,8 @@
     "start": "react-native start --reset-cache",
     "start-android": "yarn adb-reverse && react-native run-android",
     "start-ios": "react-native run-ios",
+    "lint": "eslint ./ || true",
+    "lint-fix": "eslint ./ --fix",
     "test": "jest",
     "storybook": "storybook start -p 7007"
   },
@@ -16,12 +18,22 @@
   },
   "devDependencies": {
     "@kadira/react-native-storybook": "^2.0.0",
+    "babel-eslint": "^7.1.1",
     "babel-jest": "19.0.0",
     "babel-plugin-module-resolver": "^2.5.0",
     "babel-preset-react-native": "1.9.1",
     "babel-preset-react-native-stage-0": "^1.0.1",
+    "eslint": "^3.17.1",
+    "eslint-config-semistandard": "^8.0.0",
+    "eslint-config-standard": "^7.0.1",
+    "eslint-plugin-no-unused-vars-rest": "^1.0.4",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-react-native": "^2.3.1",
+    "eslint-plugin-standard": "^2.1.1",
     "jest": "19.0.2",
-    "react-test-renderer": "~15.4.1"
+    "react-test-renderer": "~15.4.1",
+    "semistandard": "^10.0.0"
   },
   "jest": {
     "preset": "react-native"

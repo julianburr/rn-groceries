@@ -1,0 +1,5 @@
+.gradle/
+node_modules/
+android/
+ios/
+__tests__/
