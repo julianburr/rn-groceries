@@ -7,22 +7,22 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.BACKGROUND,
+    backgroundColor: colors.BACKGROUND
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 10
   },
   instructions: {
     textAlign: 'center',
     color: colors.MAIN,
-    marginBottom: 5,
-  },
+    marginBottom: 5
+  }
 });
 
 export default class groceries extends Component {
-  render() {
+  render () {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>

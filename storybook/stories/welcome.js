@@ -6,25 +6,25 @@ export default class Welcome extends React.Component {
     wrapper: {
       flex: 1,
       padding: 24,
-      justifyContent: 'center',
+      justifyContent: 'center'
     },
     header: {
       fontSize: 18,
-      marginBottom: 18,
+      marginBottom: 18
     },
     content: {
       fontSize: 12,
       marginBottom: 10,
-      lineHeight: 18,
-    },
+      lineHeight: 18
+    }
   }
 
-  showApp(e) {
+  showApp (e) {
     e.preventDefault();
-    if(this.props.showApp) this.props.showApp();
+    if (this.props.showApp) this.props.showApp();
   }
 
-  render() {
+  render () {
     return (
       <View style={this.styles.wrapper}>
         <Text style={this.styles.header}>Welcome to the <Text style={{fontWeight: 'bold'}}>Groceries</Text> Storybook</Text>

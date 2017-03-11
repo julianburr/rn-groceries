@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { View, StyleSheet, Text, Platform, Dimensions } from 'react-native'
+import { View, StyleSheet, Text, Platform, Dimensions } from 'react-native';
 import { autobind } from 'core-decorators';
 
 export const PADDING = Platform.OS === 'ios' ? 25 : 0;
