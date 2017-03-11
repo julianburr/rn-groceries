@@ -1,3 +1,16 @@
 {
-"presets": ["react-native"]
+  "presets": ["react-native-stage-0/decorator-support"],
+  "plugins" : [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "app": "./app",
+          "screens": "./app/screens",
+          "components": "./app/components",
+          "utils": "./app/utils"
+        }
+      }
+    ]
+  ]
 }
