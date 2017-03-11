@@ -10,17 +10,18 @@
     "storybook": "storybook start -p 7007"
   },
   "dependencies": {
+    "core-decorators": "^0.15.0",
     "react": "~15.4.1",
     "react-native": "0.42.0"
   },
   "devDependencies": {
+    "@kadira/react-native-storybook": "^2.0.0",
     "babel-jest": "19.0.0",
     "babel-plugin-module-resolver": "^2.5.0",
     "babel-preset-react-native": "1.9.1",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "jest": "19.0.2",
-    "react-test-renderer": "~15.4.1",
-    "@kadira/react-native-storybook": "^2.0.0"
+    "react-test-renderer": "~15.4.1"
   },
   "jest": {
     "preset": "react-native"
