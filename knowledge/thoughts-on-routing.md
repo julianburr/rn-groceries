@@ -2,7 +2,7 @@
 
 ## Config
 
-```json
+```js
 export default {
   routeA: {
     screen: ScreenA,
@@ -94,7 +94,7 @@ export default {
 
 ## Stack state
 
-```json
+```js
 {
   stack: [
     {
