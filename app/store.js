@@ -7,5 +7,14 @@ const defaultState = {
   test
 };
 
-const store = createStore(rootReducer, defaultState);
+console.log('defaultState', defaultState);
+console.log('window.__REDUX_DEVTOOLS_EXTENSION__', global.reduxNativeDevTools)
+
+const store = createStore(
+  rootReducer, 
+  defaultState, 
+  global.reduxNativeDevTools && global.reduxNativeDevTools()
+);
+
+console.log('store', store)
 export default store;
