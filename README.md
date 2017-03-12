@@ -10,7 +10,10 @@ The following are things I want to play around with and explore a bit deeper.
 
  - [ ] Create a solid RN boilerplate to use for future projects (see branch `rn-boilerplate` - should idealy be executable as a script after you run `react-native init someProjectName`!!)
  - [x] ~~Integrate Storybook for component development~~
+ - [x] ~~Set up redux structure~~
 
  - [ ] Navigation header - find a good approach dealing with iOS and Android differences, dealing with shared NH between routes (?) and with giving the component the control over the `StatusBar`
  - [ ] List element *SwipeOut* - using horizontal `ScrollView`s in the `ListView`, or even better using `Animated.ScrollView`!
- - [ ] Routing - Finding a good structure to handle both routing and modals
+ - [ ] Routing - Finding a good structure to handle both routing and modals => look at `react-navigation`
+
+ - [ ] Push Notifications - Both Android and iOS
