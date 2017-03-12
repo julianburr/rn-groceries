@@ -2,35 +2,75 @@ import React, { Component, PropTypes } from 'react';
 import { View, StyleSheet, Text, Platform, Dimensions } from 'react-native';
 import { autobind } from 'core-decorators';
 
-export const PADDING = Platform.OS === 'ios' ? 25 : 0;
-export const HEIGHT = PADDING + 50;
-
 const styles = StyleSheet.create({
   wrapper: {
-    height: HEIGHT,
-    width: Dimensions.get('window').width,
-    paddingTop: PADDING,
-    backgroundColor: 'yellow',
+    left: 0, 
+    right: 0, 
+    top: 0, 
+    height: 75, 
+    backgroundColor: 'red',
+    justifyContent: 'space-between',
+    flexDirection: 'row'
+  },
+
+  buttons: {
+    top: 25,
+    height: 50,
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+    zIndex: 200
+  },
+
+  title: {
+    position: 'absolute',
+    top: 25,
+    left: 0,
+    right: 0,
+    bottom: 0,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'center',
+    zIndex: 100
   }
 });
+
+const elementPropType = PropTypes.oneOfType([
+  PropTypes.func, 
+  PropTypes.string, 
+  PropTypes.element
+]);
 
 @autobind
 export default class NavigationHeader extends Component {
   static propTypes = {
-    title: PropTypes.string
+    title: elementPropType,
+    left: elementPropType,
+    right: elementPropType
   };
 
-  static defaultProps = {};
+  getComponentFromProp (component, state) {
+    if (typeof component === 'function') {
+      return component(state);
+    }
+    if (typeof component === 'string') {
+      return <Text>{component}</Text>;
+    }
+    return component || null;
+  }
 
   render () {
+    const { left, right, title, state } = this.props;
     return (
       <View style={styles.wrapper}>
-        <View key='leftElements' />
-        <View key='title'><Text>{this.props.title}</Text></View>
-        <View key='rightElements' />
+        <View style={styles.buttons}>
+          {this.getComponentFromProp(left, state)}
+        </View>
+        <View style={styles.buttons}>
+          {this.getComponentFromProp(right, state)}
+        </View>
+        <View style={styles.title}>
+          {this.getComponentFromProp(title, state)}
+        </View>
       </View>
     );
   }
