@@ -8,6 +8,7 @@
           "app": "./app",
           "screens": "./app/screens",
           "components": "./app/components",
+          "containers": "./app/containers",
           "utils": "./app/utils",
           "actions": "./app/actions",
           "reducers": "./app/reducers"
