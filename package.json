@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "core-decorators": "^0.15.0",
+    "mobile-center-analytics": "^0.4.0",
+    "mobile-center-crashes": "^0.4.0",
     "react": "~15.4.1",
     "react-native": "0.42.0",
     "react-redux": "^5.0.3",
