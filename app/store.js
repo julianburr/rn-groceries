@@ -5,21 +5,24 @@ import offlineConfig from 'redux-offline/lib/defaults';
 
 import { defaultState as test } from 'reducers/test';
 
+// Set default state
 const defaultState = {
   test
 };
 
-console.log('defaultState', defaultState);
-console.log('window.__REDUX_DEVTOOLS_EXTENSION__', global.reduxNativeDevTools)
+// Compose with redux dev tools whenever available
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+// Define middleware here
+const middleware = [
+  offline(offlineConfig)
+];
+
+// Create redux store
 const store = createStore(
   rootReducer, 
   defaultState, 
-  compose(
-    global.reduxNativeDevTools && global.reduxNativeDevTools(),
-    offline(offlineConfig)
-  )
+  composeEnhancers(...middleware)
 );
 
-console.log('store', store)
 export default store;
