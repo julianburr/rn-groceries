@@ -1,5 +1,7 @@
-import { createStore } from 'redux';
+import { createStore, compose } from 'redux';
 import rootReducer from './reducers';
+import { offline } from 'redux-offline';
+import offlineConfig from 'redux-offline/lib/defaults';
 
 import { defaultState as test } from 'reducers/test';
 
@@ -13,7 +15,10 @@ console.log('window.__REDUX_DEVTOOLS_EXTENSION__', global.reduxNativeDevTools)
 const store = createStore(
   rootReducer, 
   defaultState, 
-  global.reduxNativeDevTools && global.reduxNativeDevTools()
+  compose(
+    global.reduxNativeDevTools && global.reduxNativeDevTools(),
+    offline(offlineConfig)
+  )
 );
 
 console.log('store', store)
