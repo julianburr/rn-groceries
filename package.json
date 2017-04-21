@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-native start --reset-cache",
-    "start-android": "yarn adb-reverse && react-native run-android",
+    "start-android": "react-native run-android",
     "start-ios": "react-native run-ios",
     "lint": "eslint ./ || true",
     "lint-fix": "eslint ./ --fix",
